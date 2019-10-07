@@ -1,4 +1,10 @@
 body {
+  background: black;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: papayawhip;
+}
+main {
   background: black url('/images/background.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -11,7 +17,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Sans-serif', cursive;
-  margin: 15px;
+  margin: 25px;
   padding: 0px;
 }
 
