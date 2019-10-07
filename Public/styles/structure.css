@@ -1,0 +1,24 @@
+body {
+  background: black url('/images/background.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: papayawhip;
+  font-family: 'Times New Roman', serif;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 100px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sans-serif', cursive;
+  margin: 15px;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 5.00em;
+  color: white;
+  margin-bottom: 40px;
+}
+
+}
