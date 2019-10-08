@@ -28,12 +28,15 @@ class Activity
     @id = result.first()['id'].to_i
   end
 
-  # def members()
-  #   sql = "SELECT .* FROM members z INNER JOIN bookings b ON b.member_id = z.id WHERE b.activity_id = $1;"
-  #   values = [@id]
-  #   result = SqlRunner.run(sql, values)
-  #   return result.map { |member| Member.new(member) }
-  # end
+  def members()
+    sql = "SELECT m.* FROM members AS m
+    JOIN bookings AS b ON b.member_id = m.id
+    JOIN activities AS a ON a.id = b.activity_id
+    WHERE b.activity_id = $1;"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    return result.map { |member| Member.new(member) }
+  end
 
   def update()
    sql = "UPDATE activities SET (name, date_and_time) = ($1, $2) WHERE id = $3"

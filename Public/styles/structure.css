@@ -1,14 +1,6 @@
 body {
-  background: black;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: papayawhip;
-}
-main {
-  background: black url('/images/background.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: papayawhip;
+   background: white
+  color: blue;
   font-family: 'Times New Roman', serif;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -22,9 +14,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 5.00em;
-  color: white;
-  margin-bottom: 40px;
+  font-size: 6.00em;
+  color: purple;
+  margin-bottom: 50px;
+}
+main {
+  padding: 25px;
+  font-size: 2.00em;
 }
 
+.row {
+  display: flex;
+ flex-direction:initial;
+}
 }

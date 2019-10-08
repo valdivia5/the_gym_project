@@ -11,7 +11,7 @@ get '/bookings' do
   erb ( :"bookings/index" )
 end
 
-get '/bitings/new' do
+get '/bookings/new' do
   @activities = Booking.all
   @members = Member.all
   erb(:"bookings/new")
@@ -24,6 +24,6 @@ post '/bookings' do
 end
 
 post '/bookings/:id/delete' do
-  Booking.destroy(params[:id])
+  Booking.delete(params[:id])
   redirect to("/bookings")
 end

@@ -1,0 +1,23 @@
+<h1>Concha! There´s a booking</h1>
+
+<form action="/bookings" method="post">
+  <label>
+  Select a member:
+    <select name="member_id">
+      <% for member in @members %>
+      <option value="<%= member.id %>"><%= member.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <label>
+    Select an activity:
+    <select name="activity_id">
+      <% for activity in @activities %>
+      <option value="<%= activity.id %>"><%= activity.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <input  type='submit' value="Book concha!">
+</form>

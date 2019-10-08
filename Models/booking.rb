@@ -40,6 +40,8 @@ class Booking
     return Activity.new( result.first )
   end
 
+
+
   def member()
     sql = "SELECT * FROM members
     WHERE id = $1"
@@ -59,7 +61,7 @@ class Booking
     SqlRunner.run( sql )
   end
 
-  def self.destroy(id)
+  def self.delete(id)
     sql = "DELETE FROM bookings
     WHERE id = $1"
     values = [id]

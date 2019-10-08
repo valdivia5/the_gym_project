@@ -15,7 +15,7 @@ CREATE TABLE activities
 (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  date_and_time VARCHAR(255)
+  date_and_time TIMESTAMP
 );
 
 CREATE TABLE bookings
@@ -24,11 +24,3 @@ CREATE TABLE bookings
   member_id INT8 REFERENCES members(id),
   activity_id INT8 REFERENCES activities(id)
 );
-
-
---
--- INSERT INTO activities (name, date_and_time) VALUES ('Leg hour', "29/10/2019 8:00AM");
---
--- INSERT INTO members (first_name, last_name) VALUES ('Ana', 'Pelana');
---
--- INSERT INTO bookings (member_id, activity_id) VALUES (1, 1);
