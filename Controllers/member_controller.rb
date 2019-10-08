@@ -2,11 +2,12 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/member.rb')
 also_reload('../models/*')
+
 #---------- NEW/CREATE--------------------------
 
 get '/members/new' do
   @members = Member.all
-  redirect to("/members")
+  
   erb(:"members/new")
 end
 
