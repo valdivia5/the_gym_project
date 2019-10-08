@@ -67,4 +67,8 @@ class Member
     SqlRunner.run( sql )
   end
 
+  def self.full_name
+    return "#{@first_name.capitalize} #{@last_name.capitalize}"
+  end
+
 end

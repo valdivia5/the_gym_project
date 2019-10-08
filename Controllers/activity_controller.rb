@@ -5,10 +5,10 @@ also_reload('../models/*')
 
 get '/activities' do
   @activities = Activity.all()
-  erb (:"activity/index")
+  erb (:"activities/index")
 end
 
 get '/activities/:id' do
   @activities = Activity.find(params['id'].to_i)
-  erb(:"activity/show")
+  erb(:"activities/show")
 end

@@ -5,7 +5,7 @@
   Select a member:
     <select name="member_id">
       <% for member in @members %>
-      <option value="<%= member.id %>"><%= member.name %></option>
+      <option value="<%= member.id %>"><%= member.full_name %></option>
       <% end %>
     </select>
   </label>

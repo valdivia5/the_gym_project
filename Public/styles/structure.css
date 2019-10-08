@@ -1,5 +1,8 @@
 body {
-   background: white
+  background: white url('/images/background1.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: blue;
   font-family: 'Times New Roman', serif;
   margin-top: 100px;
@@ -8,23 +11,26 @@ body {
   margin-left: 100px;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Sans-serif', cursive;
+  font-family: 'Impact', fantasy;
   margin: 25px;
   padding: 0px;
 }
 
 h1 {
-  font-size: 6.00em;
-  color: purple;
+  font-size: 5.00em;
+  color: white;
   margin-bottom: 50px;
+}
+
+h2, h3, h4 {
+  font-size: 2.00em;
+  color: white;
+  margin-bottom: 50px;
+
 }
 main {
   padding: 25px;
   font-size: 2.00em;
 }
 
-.row {
-  display: flex;
- flex-direction:initial;
-}
 }

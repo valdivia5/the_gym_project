@@ -1,18 +1,22 @@
 <h1>Bookings</h1>
 
 <p
-  <a  href="../new">New booking!</a>
+  <a  href="../new">List of all bookings.</a>
 </p>
 
 <ul>
   <% for booking in @bookings %>
   <li>
-  <p><%= booking.member.first_name %> <%= booking.activity.name %> </p>
+  <p>The member: <%= booking.member.first_name %> has joined <%= booking.activity.name %> at
+  <%= booking.activity.date_and_time %></p>
     <p>
       <form action="/bookings/<%= booking.id %>/delete" method="POST">
         <input type="submit" value="delete" />
       </form>
-    </p>
+      <form action="/bookings/<%= booking.id %>/new" method="POST">
+        <input type="submit" value="update" />
+      </form>
+   </p>
   </li>
   <% end %>
 </ul>
