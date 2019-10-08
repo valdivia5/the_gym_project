@@ -3,11 +3,11 @@ require('sinatra/contrib/all')
 require_relative('../models/member.rb')
 also_reload('../models/*')
 
-#---------- NEW/CREATE--------------------------
+#---------- NEW/CREATE------------------WORKING!!!!--------
 
 get '/members/new' do
   @members = Member.all
-  
+  @activities = Activity.all
   erb(:"members/new")
 end
 
@@ -28,7 +28,7 @@ get "/members/:id" do
   erb(:show)
 end
 
-#-----------------DELETE-------------------------
+#-----------------DELETE----------------WORKING!!!---------
 
 post '/members/:id/delete' do
   Member.delete(params[:id])

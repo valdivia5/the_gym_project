@@ -1,4 +1,4 @@
-<h1 style="text-align:center;">Add a member to the gym</h1>
+<h1 style="text-align:center;">Add a member</h1>
 
 <form style="text-align:center;" action="/members" method="post">
   <br>
@@ -20,6 +20,17 @@
   <br>
   <br>
 
+  <label for="activity-select">Select activity</label>
+  <select id="activity-select" id="activity_id">
+      <option Selected Disabled>Select Activity</option>
+      <% for activity in @activities %>
+      <option value=<%= activity.id %>><%= activity.name %></option>
+      <% end %>
+    </select>
+    <br>
+    <br>
+    <br>
+    <br>
 
   <input type="submit" value="Add Member">
 
