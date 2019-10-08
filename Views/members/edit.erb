@@ -1,34 +1,18 @@
-<h2>Edit <%= @member.full_name %></h2>
-<form method="POST" action="/students/<%= @member.id %>">
-  <div class="form-wrapper">
+<form style="text-align:center;" method="POST" action="/members/<%= @member.id %>/update">
 
-    <div class="form-el">
-      <label for="first_name">First Name:</label>
-      <input type="text" name="first_name" id="first_name" value="<%= @member.first_name %>"/>
-    </div>
+  <label for="first-name">First Name</label>
+  <input style="text-align:center;" type="text" name="first_name" id="first-name">
+  <br>
+  <br>
+  <br>
+  <br>
 
-    <div class="form-el">
-      <label for="last_name">Last Name:</label>
-      <input type="text" name="last_name" id="last_name" value="<%= @member.last_name%>"/>
-    </div>
-
-    <div
-      <label for="activity_select">Select Activity:</label>
-      <select name="house_id" id="house_select" selected="<%= @member.activity_id  %>">
-        <% @activities.each do |activity| %>
-          <% if activity.id == @member.activity_id %>
-            <option value=<%= activity.id %> selected><%= activity.name.capitalize %></option>
-          <% else %>
-            <option value=<%= activity.id %>><%= activity.name.capitalize %></option>
-          <% end %>
-        <% end %>
-      </select>
-    </div>
-
-
-    <div
-      <input type="submit" value="Update Member"/>
-    </div>
-
-  </div>
+    <label for="last-name">Last Name</label>
+  <input style="text-align:center;"  type="text" name="last_name" id="last-name" >
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <input type="submit" value="Update">
 </form>

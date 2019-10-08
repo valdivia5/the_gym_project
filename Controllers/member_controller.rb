@@ -32,15 +32,24 @@ end
 #-----------------edit/post-------------------------
 
 get "/members/:id/edit" do
-  @member = Member.find(params["id"])
-  @activity = Activity.all(params["id"])
-  erb(:edit)
+  @member = Member.find(params["id"].to_i)
+  erb(:"members/edit")
 end
 
-post "/members/:id" do
-  @member = Member.find(params["id"])
-  erb(:show)
+
+post "/members/:id/update" do
+  @member = Member.new(params)
+  @member.update()
+  redirect to("/members")
 end
+
+# post "/members/:id" do
+#   @member = Member.new(params)
+#   @member.update()
+#   erb(:update)
+# end
+
+
 
 #-----------------DELETE----------------WORKING!!!---------
 
