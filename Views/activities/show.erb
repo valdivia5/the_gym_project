@@ -1,0 +1,11 @@
+<h1><%= @activity.name %> (member)</h1>
+
+<p>Activities: <%= @activity.all %></p>
+
+
+
+<ul>
+  <% @activity.member.each do |member| %>
+  <li><%= member.name %></li>
+  <% end %>
+</ul>

@@ -7,7 +7,7 @@
 <ul>
   <% for booking in @bookings %>
   <li>
-  <p>The member: <%= booking.member.first_name %> has joined <%= booking.activity.name %> at
+  <p>The member: <%= booking.member.first_name %> has booked <%= booking.activity.name %> at
   <%= booking.activity.date_and_time %></p>
     <p>
       <form action="/bookings/<%= booking.id %>/delete" method="POST">
