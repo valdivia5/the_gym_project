@@ -47,7 +47,16 @@ class Member
    values = [@id]
    SqlRunner.run(sql, values)
   end
-#----------class methods------------------------------------------------
+# #----------class methods------------------------------------------------
+
+#
+# def self.delete(id)
+#   sql = "DELETE FROM members
+#   WHERE id = $1"
+#   values = [id]
+#   SqlRunner.run( sql, values )
+# end
+
   def self.all()
     sql = "SELECT * FROM members"
     result = SqlRunner.run( sql )

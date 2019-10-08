@@ -28,12 +28,7 @@ get "/members/:id" do
   erb(:show)
 end
 
-#-----------------DELETE----------------WORKING!!!---------
 
-post '/members/:id/delete' do
-  Member.delete(params[:id])
-  redirect to("/members")
-end
 #-----------------edit/post-------------------------
 
 get "/members/:id/edit" do
@@ -45,4 +40,11 @@ end
 post "/members/:id" do
   @member = Member.find(params["id"])
   erb(:show)
+end
+
+#-----------------DELETE----------------WORKING!!!---------
+
+post '/members/:id/delete' do
+  Member.delete(params[:id])
+  redirect to("/members")
 end
