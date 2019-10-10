@@ -54,6 +54,7 @@ end
 #-----------------DELETE----------------WORKING!!!---------
 
 post '/members/:id/delete' do
-  Member.delete(params[:id])
+  member = Member.find(params["id"].to_i)
+  member.delete
   redirect to("/members")
 end

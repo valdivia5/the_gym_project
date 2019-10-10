@@ -4,22 +4,37 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: blue;
-  font-family: 'Times New Roman', serif;
+  /* font-family: 'Times New Roman', serif; */
   margin-top: 100px;
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 100px;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 30px, 30px, grey;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Impact', fantasy;
   margin: 25px;
 
 }
 
+a {
+  text-align: center;
+  text-shadow: 10px, 5px, grey;
+  font-family: 'Impact', fantasy;
+  margin: 25px;
+}
+
+a:hover {
+  color: white;
+}
+
 h1 {
   font-size: 5.00em;
   color: white;
   margin-bottom: 50px;
+
 }
 
 h2, h3, h4 {
@@ -28,6 +43,7 @@ h2, h3, h4 {
   margin-bottom: 50px;
 
 }
+
 main {
   padding: 25px;
   font-size: 2.00em;

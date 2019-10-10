@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+
   <title>The gym</title>
+
   <link rel="shortcut icon" type="image/x-icon" href="/images/logo_gym.png" />
   <link rel="stylesheet" type="text/css" href="/styles/structure.css">
-
-
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
+ <body>
 
-
-<body>
-
-<main>
-  <nav>
-  </nav>
-  <section id="content">
-  <%= yield %>
-  </section>
-  </main>
-
-</body>
-
+  <main>
+     <nav>
+       <a href="/bookings">Bookings</a>
+       <a href="/members">Members</a>
+       <a href="/activities">Find activities</a>
+       <a href="/members/new">Add member</a>
+       <a href="/bookings/new">Make a booking</a>
+       <a href="/activities/new">Add activity</a>
+    </nav>
+     <section id="content">
+       <%= yield %>
+     </section>
+   </main>
+ </body>
 </html>
+
+
+
+
+Copyright © 2019 Adrian´s Gym Inc. All rights reserved.

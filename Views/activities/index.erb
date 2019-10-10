@@ -1,8 +1,16 @@
 <h1 style="text-align:center;">Activities</h1>
 <% for activity in @activities %>
   <br>
-  <h3 style="text-align:center;"> Activity Name: <%= activity.name %> </h3>
-  <h4 style="text-align:center;"> <a href="/activities/<%= activity.id %>/members/index">Show members in activity</a> </h4>
+  <h3 style="text-align:center;"> <%= activity.name %>  </h3>
+  <h4 style="text-align:center;"> <a href="/activities/<%= activity.id %>/show ">Show members in activity</a> </h4>
+
+  <form action="/activities/<%= activity.id %>/delete" method="POST">
+    <input type="submit" value="delete" />
+  </form>
+
+  <a href="/activities/<%= activity.id %>/edit">
+    edit
+  </a>
 
   <br>
   <hr>

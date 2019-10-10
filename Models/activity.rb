@@ -7,7 +7,7 @@ class Activity
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @date_and_time = options['date_and_time'].to_i
+    @date_and_time = options['date_and_time']
   end
 
 
